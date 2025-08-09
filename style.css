@@ -1,147 +1,73 @@
-
-* {
+html {
+  font-size: 62.5%;
+  padding:0;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  background: linear-gradient(to right, rgb(17, 253, 253), rgb(230, 85, 109));
 }
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #2d2dff, #8e44ad);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+body{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 form {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(18px);
-  border-radius: 20px;
-  padding: 40px;
-  width: 100%;
-  max-width: 700px;
-  color: #fff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width:30em;
+    gap: 1em;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 2em;
+    box-shadow: 4px 6px 2px 0px rgba(0, 0, 0, 0.3);
+    padding: 3em;
+    background: linear-gradient(to right , rgb(0, 221, 255) , rgb(253, 17, 107));
 }
 
-@keyframes fadeIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-p {
-  margin-bottom: 20px;
+input {
+  font-size: 1.5rem;
+  padding: 0.4em;
+  border-radius: 0.4em;
 }
 
 label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: #ffffff;
+  font-size: 1.9rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+p{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 0.2em;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-select {
-  width: 100%;
-  padding: 14px;
-  margin-top: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 16px;
-  transition: all 0.3s ease;
+button {
+  background-color: greenyellow;
+  font-size: 2rem;
+  border-radius: 0.4em;
+  width: 4em;
+  padding: 0.3em;
+  margin: auto;
+  box-shadow: 1px 3px 6px rgb(172, 165, 165);
+  
 }
-
-input:focus,
-select:focus {
-  outline: none;
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+button:hover {
+  background-color: rgb(148, 215, 48);
 }
 
 fieldset {
-  border: none;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.1rem;
+}
+legend{
+    font-size: 1.2rem;
 }
 
-legend {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-li {
-  display: flex;
-  align-items: center;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-label[for^="title_"] {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-input[type="radio"]:checked + label {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.35);
-  color: #000;
-}
-
-strong span[aria-label="required"] {
-  color: #ff4d4d;
-  margin-left: 6px;
-  font-weight: bold;
-}
-
-button[type="submit"] {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-button[type="submit"]:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #0072ff, #00c6ff);
+fieldset label{
+    padding: 0 0 0.5em;
 }
