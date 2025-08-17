@@ -1,11 +1,19 @@
-.container{
+.container {
   display: grid;
-  grid-template: 50px 50px  / 50px 50px 50px;
-  grid-auto-rows: 50px;
-
-  gap: 10px ;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px;
 }
 
-.container > div {
-  border: 2px solid blue;
+.item{
+  background-color: orange;
+  border: 1px solid black;
+  text-align: center;
 }
+
+.first-row {
+  background-color: rgb(72, 0, 255);
+}
+.last-column {
+  background-color: lightblue;
+}
+
