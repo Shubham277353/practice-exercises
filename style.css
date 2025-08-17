@@ -1,19 +1,38 @@
 .container {
-  display: grid;
-  grid-template-rows: 50px 50px 50px;
-  grid-template-columns: 50px 50px 50px;
+  display: inline-grid;
+  grid-template: repeat(5, 40px) / repeat(5, 40px);
+  background-color: lightblue;
+  grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
 }
 
-.item{
-  background-color: orange;
+.room {
   border: 1px solid black;
+  font-size: 50%;
   text-align: center;
 }
 
-.first-row {
-  background-color: rgb(72, 0, 255);
-}
-.last-column {
-  background-color: lightblue;
+#living-room {
+  grid-area: living-room;
 }
 
+#bathroom {
+  grid-area: bathroom;
+}
+
+#kitchen {
+  grid-area: kitchen;
+}
+
+#bedroom {
+  grid-area: bedroom;
+}
+
+
+#closet {
+  /* /row/column/rowend/columnend */
+  grid-area: 5/1/6/6;
+}
