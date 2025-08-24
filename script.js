@@ -1,14 +1,18 @@
-function Player(name , marker){
-  if(!new.target){
-    throw Error("You must use the new keyword to call the constructor")
-  }
-
-  this.name = name; 
-  this.marker=marker;
-  this.sayName = ()=> console.log(this.name);
+function Books(title, authorName, numberOfPages, finished) {
+  this.title = title;
+  this.authorName = authorName;
+  this.numberOfPages = numberOfPages;
+  this.finished = finished;
+  this.bookInfo = () => {
+    return `The ${this.title} by ${this.authorName}, ${
+      this.numberOfPages
+    } pages, ${this.finished ? "read" : "not read yet"}`;
+  };
 }
 
-let player = new Player("Steve", "x");
-let player2 = new Player("GoluBoi","o");
-player.sayName();
-player2.sayName();
+let book = new Books("Hobbit", "J.R.R Tolkien", 295, false);
+let book2 = new Books("Kite RUnner", "Khalid Husseni", 300, true);
+let book3 = new Books("Digital Fortress", "Dan Brown", 400, true);
+console.log(book.bookInfo());
+console.log(book2.bookInfo());
+console.log(book3.bookInfo());
