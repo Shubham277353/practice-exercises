@@ -1,9 +1,14 @@
-let john = { name: "John", age: 25 };
-let pete = { name: "Pete", age: 30 };
-let mary = { name: "Mary", age: 28 };
+function Player(name , marker){
+  if(!new.target){
+    throw Error("You must use the new keyword to call the constructor")
+  }
 
-let users = [ john, pete, mary ];
+  this.name = name; 
+  this.marker=marker;
+  this.sayName = ()=> console.log(this.name);
+}
 
-let names = users.map(item => item.name);
-
-alert( names ); // John, Pete, Mary
+let player = new Player("Steve", "x");
+let player2 = new Player("GoluBoi","o");
+player.sayName();
+player2.sayName();
