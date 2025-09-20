@@ -1,16 +1,23 @@
-class User {
-  constructor(name) { this.name = name; }
-  sayHi() { alert(this.name); }
+class Product {
+  constructor(name,price){
+    this.name = name;
+    this.price = price;
+  }
+
+  displayProduct(){
+    console.log(`Product: ${this.name}`);
+    console.log(`Price: ${this.price}`);
+  }
+
+  calculatePrice(){
+    return this.price + (this.price*(18/100));
+  }
 }
 
-// class is a function
-alert(typeof User); // function
+const product1 = new Product("Shirt",300);
+const product2 = new Product("Pants",550);
+const product3 = new Product("Underwear",150);
 
-// ...or, more precisely, the constructor method
-alert(User === User.prototype.constructor); // true
 
-// The methods are in User.prototype, e.g:
-alert(User.prototype.sayHi); // the code of the sayHi method
-
-// there are exactly two methods in the prototype
-alert(Object.getOwnPropertyNames(User.prototype));
+product1.displayProduct();
+console.log(product1.calculatePrice());
