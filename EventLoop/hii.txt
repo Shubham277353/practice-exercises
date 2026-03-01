@@ -1,0 +1,15 @@
+event loop is like a controller between the :
+- Stack 
+- Web API 
+- Task queue 
+
+when the task goes from stack to web api like the setTimeOut it goes through the 
+timer in the webapi while other tasks are being finished in the js .
+
+js is actually a single threaded language which means it can only run one task at a time .
+
+after the timer is finished in the web api the task can't dirctly be sent to the stack so it goes
+to the task queue , where the EVENT LOOP checks if the stack is empty or not , if it's empty 
+the task goes to the stack and executes . 
+
+Simple that's the job of event loop , like a traffic police guiding the tasks towards the empty stack.
