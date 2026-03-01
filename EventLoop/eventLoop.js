@@ -1,11 +1,10 @@
-new Promise((resolve) => {
-  resolve(5);
-}).then((num) => {
-  console.log(num);
-  return num * 2;
-}).then((num2)=>{
-    console.log(num2);
-    return num2 *2;
-}).then((num3)=>{
-    console.log(num3);
+new Promise((resolve, reject) => {
+  resolve("Hey its done ");
+  reject("Something went wrong");
 })
+.catch((error) => {
+  console.log("Error:", error);
+})
+  .then((result) => {
+    console.log(result);
+  })
